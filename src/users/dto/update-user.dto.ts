@@ -13,4 +13,7 @@ export class UpdateUserDto {
 
   @IsOptional()
   password?: string;
+
+  @IsOptional()
+  role?:any
 }
