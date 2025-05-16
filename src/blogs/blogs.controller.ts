@@ -2,8 +2,10 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { BlogsService } from './blogs.service';
 import { CreateBlogDto } from './dto/create-blog.dto';
 import { UpdateBlogDto } from './dto/update-blog.dto';
+import { ApiBearerAuth } from '@nestjs/swagger';
 
 @Controller('blogs')
+@ApiBearerAuth()
 export class BlogsController {
   constructor(private readonly blogsService: BlogsService) {}
 

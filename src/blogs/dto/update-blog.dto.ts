@@ -8,4 +8,7 @@ export class UpdateBlogDto extends PartialType(CreateBlogDto) {
 
   @IsOptional()
   content?: string;
+
+  @IsOptional()
+  userId?: number;
 }
